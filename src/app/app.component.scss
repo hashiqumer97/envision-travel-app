@@ -1,0 +1,133 @@
+.topnav {
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: #f2f2f2;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.box{
+  position: relative;
+  display: inline-block; /* Make the width of box same as image */
+
+}
+.box .text{
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 100%;
+  top: 0; /* Adjust this value to move the positioned div up and down */
+  text-align: left;
+  width: 100%; /* Set the width of the positioned div */
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+select {
+  height: 50px;
+  width:  290px;
+  text-align: center;
+  color: black;
+}
+
+
+label {
+  /* Other styling... */
+  text-align: right;
+  clear: both;
+  float:left;
+  margin-right:15px;
+}
+
+.container {
+  position: relative;
+  width: 33.3333%;
+  float: left;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.texts {
+  color: black;
+  font-size: 30px;
+  padding: 16px 32px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, td, th {
+  border: 1px solid white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.thecolumn {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.thecolumns {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.therow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
