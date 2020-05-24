@@ -12,7 +12,7 @@
   <a>Home</a>
 </div>
 <div class="box">
-  <img src="../assets/img/beachdark.jpg" alt="beachdark" style="width: 100%;">
+  <img src="../assets/img/beachdark.jpg" alt="beachdark" style="width: 100%; height: auto;">
   <div class="text">
       <h1 style="font-size: 80px;">Discover<br>A new Place</h1>
       <br>
@@ -26,7 +26,8 @@
       <br>
       <br>
       <br>
-        <table style="font-family: Arial, Helvetica, sans-serif;">
+      <div class="table-responsive">
+        <table style="font-family: Arial, Helvetica, sans-serif;margin-left:auto;margin-right:auto;">
           <tr>
             <th style="text-align: center;">Destination</th>
             <th style="text-align: center;">Departure Date</th>
@@ -34,7 +35,7 @@
             <th style="text-align: center;">Number of Guests</th>
           </tr>
           <tr>
-            <td style="width: 20%;">
+            <td style="width: auto;">
               <div class="dropdown">
               <select style="height: 46px;">
                 <option value="0">Italy - Rome</option>
@@ -43,13 +44,13 @@
               </select>
             </div>
             </td>
-            <td style="width: 20%;">
-              <input style="height: 46px; width: 270px; color: black;" id="date" type="date" name="departdate">
+            <td style="width: auto;">
+              <input style="height: 46px; width: auto; color: black;" id="date" type="date" name="departdate">
             </td>
-            <td style="width: 20%;">
-              <input style="height: 46px; width: 270px; color: black;" id="arrdate" type="date" name="arrivaldate">
+            <td style="width: auto;">
+              <input style="height: 46px; width: auto; color: black;" id="arrdate" type="date" name="arrivaldate">
             </td>
-            <td style="width: 20%;">
+            <td style="width: auto;">
               <div class="dropdown">
                 <select style="height: 46px;">
                   <option value="0">1 Guest</option>
@@ -59,11 +60,12 @@
                 </select>
               </div>
             </td>
-            <td style="width: 20%;">
-              <button type="button" class="btn btn-warning" style="height: 50px; width: 222px;color: white; background-color: orange;">Search</button>
+            <td style="width: auto;">
+              <button type="button" class="btn btn-warning" style="height: auto; width: auto;color: white; background-color: orange;">Search</button>
             </td>
           </tr>
         </table>
+      </div>
       </div>
       </div>
   <br>
