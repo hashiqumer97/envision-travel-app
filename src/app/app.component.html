@@ -4,24 +4,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <div class="topnav">
-  <a style="float: left;">TRAVEL ME 360</a>
-  <a>Promotions</a>
-  <a>Holidays</a>
-  <a>Destinations</a>
-  <a>Flights</a>
-  <a>Home</a>
+  <a style="float: left; font-size: 20px;">TRAVEL ME 360</a>
+  <a style="padding-left: 50px; font-size: 15px;">HOME</a>
+  <a style="font-size: 15px;">FLIGHTS</a>
+  <a style="font-size: 15px;">DESTINATIONS</a>
+  <a style="font-size: 15px;">HOLIDAYS</a>
+  <a style="font-size: 15px;">PROMOTIONS</a>
 </div>
 <div class="box">
   <img src="../assets/img/beachdark.jpg" alt="beachdark" style="width: 100%; height: auto;">
   <div class="text">
-      <h1 style="font-size: 80px;">Discover<br>A new Place</h1>
+      <h1 style="font-size: 80px; padding-left: 200px;">Discover<br>A new Place</h1>
       <br>
       <br>
       <br>
-      <p style="font-size: 20px;">Travel to the any corner of the world, without going<br>around in circles</p>
+      <p style="font-size: 20px; padding-left: 200px;">Travel to the any corner of the world, without going<br>around in circles</p>
       <br>
       <br>
-      <strong style="font-size: 20px;">FIND YOUR HOLIDAY
+      <strong style="font-size: 20px; padding-left: 200px;">FIND YOUR HOLIDAY
       </strong>
       <br>
       <br>
@@ -69,17 +69,22 @@
       </div>
       </div>
   <br>
-  <div style="text-align: center;">
-    <video width="640" height="480" controls>
+  <div>
+    <table style="font-family: Arial, Helvetica, sans-serif;">
+<tr>
+  <td>
+    <video width="640" height="480" controls style=" padding-left: 50px;">
       <source src="../assets/img/travelvideo.mp4" type="video/mp4">
       <source src="../assets/img/travelvideo.ogg" type="video/ogg">
       Video is Not Available
     </video>
+  </td>
+  <td>
     <br>
     <br>
-    <p style="color: grey; text-align: center; font-family: Arial, Helvetica, sans-serif;">Welcome to Travel Me 360</p>
-    <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 60px;">The Best Travel Agency</h1>
-    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; text-align: justify; padding-left: 235px; width: 80%;">As a country blessed with incomparable natural charm, as well a rich cultural heritage spanning nearly 3 millennia, Sri Lanka possesses immense potential for inbound tourism.
+    <p style="color: grey; text-align: left; padding-left: 100px; font-family: Arial, Helvetica, sans-serif;">Welcome to Travel Me 360</p>
+    <strong style="font-family: Arial, Helvetica, sans-serif; padding-left: 100px; font-size: 40px;">The Best Travel Agency</strong>
+    <p style="font-family: Arial, Helvetica, sans-serif; text-align: left; padding-left: 100px; width: 70%;">As a country blessed with incomparable natural charm, as well a rich cultural heritage spanning nearly 3 millennia, Sri Lanka possesses immense potential for inbound tourism.
 
       With a view to tapping this lucrative segment, Traveller Global Destinations & Leisure Holidays (Pvt) Ltd was
       incorporated in 2002, as a subsidiary of The Traveller Global (Pvt) Ltd. Our parent company was formed by
@@ -92,8 +97,11 @@
       Mr. Ramzi Reyal, who is a respected and well-known personality in the travel & tourism industry. His ‘Hands-on’
       approach and personal involvement in all aspects of day-to-day operations is an asset to the company.
     </p>
-    <img src="../assets/img/socialmediaicon.PNG" alt="socialmediaicon">
-  </div>
+    <img src="../assets/img/socialmediaicon.PNG" alt="socialmediaicon" style="padding-left: 100px;">
+  </td>
+</tr>
+
+  </table>
   <br>
   <br>
   <div style="text-align: center;">
@@ -129,87 +137,121 @@
     Here below you will find the popular holiday offers that we are offering currently</p>
     <br>
     <br>
-    <table style="font-family: Arial, Helvetica, sans-serif;">
-      <tr>
-        <div class="container">
-        <td><img src="../assets/img/newyork.jpg" alt="USA" class="img-rounded" style="height: 200px; width: 400px;"></td>
-        </div>
-        <td style="width: 100px;"><strong style="font-size: 20px;">New York (United States)</strong></td>
-        <td style="width: 100px;"><img src="../assets/img/starpic.PNG" alt="starpic"></td>
-        <td><p>The United States of America (USA), commonly known as the United States (U.S. or US) or America, is a
-          country consisting of 50 states, a federal district, five major self-governing territories, and various possessions.
-          [g] At 3.8 million square miles (9.8 million km2), it is the world's third- or fourth-largest country by total area.[c]
-          </p></td>
-           <td style="width: 100px;"><strong style="font-size: 20px;">$300</strong></td>
-           <td><button type="button" class="btn btn-primary" style="height: 50px; width: auto;">View Details</button></td>
-      </tr>
-      <tr>
-        <div class="container">
-        <td><img src="../assets/img/zurich.jpg" alt="Switzerland" class="img-rounded" style="height: 200px; width: 400px;"></td>
+      <div class="container">
+        <img src="../assets/img/newyork.jpg" alt="USA" class="img-rounded" style="height: 200px; width: 400px;">
+        <strong style="font-size: 20px; float: left;font-size: 30px;">United States</strong>
+        <strong style="font-size: 20px;float: right; color: orange; padding-right: 20px;font-size: 30px;">$300</strong>
+        <br>
+        <br>
+        <img src="../assets/img/starpic.PNG" alt="starpic" style="float: left; width: auto; padding-right: 200px;">
+        <p *ngFor="let com of lstmodels" style="float: left; text-align: left;">{{com.body}}</p>
       </div>
-        <td style="width: 100px;"><strong style="font-size: 20px; padding-left: 10px;">Zurich (Switzerland)</strong></td>
-        <td style="width: 100px;"><img src="../assets/img/starpic.PNG" alt="starpic"></td>
-        <td><p>Switzerland, officially the Swiss Confederation, is a country situated in the confluence of Western,
-          Central, and Southern Europe.[10][note 4] It is a federal republic composed of 26 cantons, with federal
-          authorities based in Bern.[1][2][note 1] Switzerland is a landlocked country bordered by Italy to the south,
-          France to the west, Germany to the north, and Austria and Liechtenstein to the east.</p></td>
-          <td style="width: 100px;"><strong style="font-size: 20px;">$400</strong></td>
-           <td><button type="button" class="btn btn-primary" style="height: 50px; width: auto;">View Details</button></td>
-      </tr>
-      <tr>
-        <div class="container">
-        <td><img src="../assets/img/toronto.jpg" alt="Canada" class="img-rounded" style="height: 200px; width: 400px;"></td>
-        </div>
-        <td style="width: 100px;"><strong style="font-size: 20px;">Toronto (Canada)</strong></td>
-        <td style="width: 100px;"><img src="../assets/img/starpic.PNG" alt="starpic"></td>
-        <td><p>Canada is a country in the northern part of North America. Its ten provinces and three territories
-          extend from the Atlantic to the Pacific and northward into the Arctic Ocean, covering 9.98 million square
-          kilometres (3.85 million square miles), making it the world's second-largest country by total area.
-        </p></td>
-          <td style="width: 100px;"><strong style="font-size: 20px;">$500</strong></td>
-          <td><button type="button" class="btn btn-primary" style="height: 50px; width: auto;">View Details</button></td>
-      </tr>
-    </table>
+      <div class="container">
+        <img src="../assets/img/zurich.jpg" alt="Switzerland" class="img-rounded" style="height: 200px; width: 400px;">
+        <strong style="font-size: 20px; float: left;font-size: 30px;">Switzerland</strong>
+        <strong style="font-size: 20px;float: right; color: orange; padding-right: 20px;font-size: 30px;">$300</strong>
+        <br>
+        <br>
+        <img src="../assets/img/starpic.PNG" alt="starpic" style="float: left; width: auto; padding-right: 200px;">
+        <p *ngFor="let com of lstmodels" style="float: left; text-align: left;">{{com.body}}</p>
+      </div>
+      <div class="container">
+        <img src="../assets/img/toronto.jpg" alt="Canada" class="img-rounded" style="height: 200px; width: 400px;">
+        <strong style="font-size: 20px; float: left;font-size: 30px;">Canada</strong>
+        <strong style="font-size: 20px;float: right; color: orange; padding-right: 20px;font-size: 30px;">$300</strong>
+        <br>
+        <br>
+        <img src="../assets/img/starpic.PNG" alt="starpic" style="float: left; width: auto; padding-right: 200px;">
+        <p *ngFor="let com of lstmodels" style="float: left; text-align: left;">{{com.body}}</p>
+      </div>
+    </div>
 </div>
-<br>
-<br>
+<p style="color: white;font-size: 30px;">holiday</p>
 <div style="text-align: center;">
+  <button type="button" class="btn btn-warning" style="height: 50px; width: 150px;text-align: center; background-color: orange;">More Places</button>
+</div>
+<div style="text-align: center;">
+  <br>
+  <br>
   <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 60px;">Feedback</h1>
-  <table style="font-family: Arial, Helvetica, sans-serif;">
-    <tr>
-      <th style="text-align: center;">Name</th>
-      <th style="text-align: center;">Email</th>
-      <th style="text-align: center;">Feedback</th>
-    </tr>
-    <tr *ngFor="let com of lstmodels">
-      <td style="width: 33.33%;">{{com.name}}</td>
-      <td style="width: 33.33%;">{{com.email}}</td>
-      <td style="width: 33.33%;">{{com.body}}</td>
-    </tr>
-  </table>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides">
+      <img src="../assets/img/person1.PNG" alt="person1" class="rounded-circle" style="height: 150px;">
+      <br>
+      <br>
+      <q *ngFor="let com of lstmodels">{{com.name}}</q>
+      <br>
+      <br>
+      <img src="../assets/img/starpic2.PNG" alt="person1">
+      <br>
+      <br>
+      <p class="author">- John Keats</p>
+    </div>
+
+    <div class="mySlides">
+      <img src="../assets/img/person2.PNG" alt="person2" class="rounded-circle" style="height: 150px;">
+      <br>
+      <br>
+      <q *ngFor="let com of lstmodels">{{com.name}}</q>
+      <br>
+      <br>
+      <img src="../assets/img/starpic2.PNG" alt="person2">
+      <br>
+      <br>
+      <p class="author">- Ernest Hemingway</p>
+    </div>
+
+    <div class="mySlides">
+      <img src="../assets/img/person3.PNG" alt="person3" class="rounded-circle" style="height: 150px;">
+      <br>
+      <br>
+      <q *ngFor="let com of lstmodels">{{com.name}}</q>
+      <br>
+      <br>
+      <img src="../assets/img/starpic2.PNG" alt="person3">
+      <br>
+      <br>
+      <p class="author">- Thomas A. Edison</p>
+    </div>
+
+
+    </div>
+
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+<script src="../assets/js/custom.js"></script>
 </div>
+
 <br>
 <br>
-<div style="text-align: center;">
-  <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 60px;">Latest Stories</h1>
+<div>
+  <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 60px; text-align: center;">Latest Stories</h1>
   <div class="therow">
     <div class="thecolumn">
       <img src="../assets/img/travelpic1.jpg" alt="travelpic1" class="img-rounded" style="height: 261px;text-align: left;">
-      <p style="color: grey; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+      <br>
+      <p style="color: grey; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 15px; float: left;  padding-left: 5px;">
         Apr 2 2020</p>
-        <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 25px;">Live with no excuses and travel with no regrets</h1>
+        <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; float: left;  padding-left: 5px;">Live with no excuses and travel with no regrets</h1>
     </div>
     <div class="thecolumn">
       <img src="../assets/img/travelpic2.jpg" alt="travelpic2" class="img-rounded" style="height: 261px;">
-      <p style="color: grey; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+      <br>
+      <p style="color: grey; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 15px; float: left; padding-left: 5px;">
         Apr 9 2020</p>
-        <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 25px;">We travel not to escape life but for life not to escape us</h1>
+        <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; float: left; padding-left: 5px;">We travel not to escape life but for life not to escape us</h1>
     </div>
     <div class="thecolumn">
       <img src="../assets/img/travelpic3.jpg" alt="travelpic3" class="img-rounded" style="height: 261px;">
-      <p style="color: grey; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+      <br>
+      <p style="color: grey; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 15px; float: left; padding-left: 5px;">
         Apr 14 2020</p>
-        <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 25px;">People don't take trips, trips take people</h1>
+        <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; float: left; padding-left: 5px;">People don't take trips, trips take people</h1>
     </div>
   </div>
 </div>
@@ -226,27 +268,21 @@
       <div class="form-group" [class.has-error]="subemail.invalid && subemail.touched">
       <input type="email" required email id="subemail" name="subemail"
       placeholder="Enter email address" #subemail="ngModel"
-      style="width: 400px; height: 50px; bottom: 80px;" class="form-control" ngModel
+      style="width: 400px; height: 50px; bottom: 80px; float: left;" class="form-control" ngModel
       #email="ngModel"/>
-      <td>
-        <span class="help-block" *ngIf="subemail.errors && subemail.errors.invalid && subemail.touched">
-          Email is required
-        </span>
-        <span class="help-block" *ngIf="subemail.errors && subemail.errors.email && subemail.touched">
-          Email is invalid
-        </span>
-      </td>
-    </div>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding-left: 5px;">
-      <div>
       <button type="submit"
        (click)="subclick()" [disabled]="!!subemail.errors?.email && subemail.touched"
-       [disabled]="subform.invalid" class="btn btn-success"
-       style="height: 55px; width: auto;">Subscribe</button>
-      </div>
+       [disabled]="subform.invalid" class="btn btn-default"
+       style="height: 49.5px; width: auto; float: left;">Subscribe</button>
+       <br>
+       <br>
+       <span class="help-block" *ngIf="subemail.errors && subemail.errors.invalid && subemail.touched" style="color: red; float: left;">
+        Email is required
+      </span>
+      <span class="help-block" *ngIf="subemail.errors && subemail.errors.email && subemail.touched" style="color: red; float: left;">
+        Email is invalid
+      </span>
+    </div>
     </td>
   </tr>
   </table>
