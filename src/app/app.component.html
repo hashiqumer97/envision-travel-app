@@ -61,7 +61,7 @@
               </div>
             </td>
             <td style="width: auto;">
-              <button type="button" class="btn btn-warning" style="height: auto; width: auto;color: white; background-color: orange;">Search</button>
+              <button type="button" class="btn btn-warning" style="height: 44px; width: auto;color: white; background-color: orange;">Search</button>
             </td>
           </tr>
         </table>
@@ -131,7 +131,9 @@
     <br>
     <table style="font-family: Arial, Helvetica, sans-serif;">
       <tr>
+        <div class="container">
         <td><img src="../assets/img/newyork.jpg" alt="USA" class="img-rounded" style="height: 200px; width: 400px;"></td>
+        </div>
         <td style="width: 100px;"><strong style="font-size: 20px;">New York (United States)</strong></td>
         <td style="width: 100px;"><img src="../assets/img/starpic.PNG" alt="starpic"></td>
         <td><p>The United States of America (USA), commonly known as the United States (U.S. or US) or America, is a
@@ -139,10 +141,12 @@
           [g] At 3.8 million square miles (9.8 million km2), it is the world's third- or fourth-largest country by total area.[c]
           </p></td>
            <td style="width: 100px;"><strong style="font-size: 20px;">$300</strong></td>
-           <td><button type="button" class="btn btn-primary" style="height: 50px; width: 200px;">View Details</button></td>
+           <td><button type="button" class="btn btn-primary" style="height: 50px; width: auto;">View Details</button></td>
       </tr>
       <tr>
+        <div class="container">
         <td><img src="../assets/img/zurich.jpg" alt="Switzerland" class="img-rounded" style="height: 200px; width: 400px;"></td>
+      </div>
         <td style="width: 100px;"><strong style="font-size: 20px; padding-left: 10px;">Zurich (Switzerland)</strong></td>
         <td style="width: 100px;"><img src="../assets/img/starpic.PNG" alt="starpic"></td>
         <td><p>Switzerland, officially the Swiss Confederation, is a country situated in the confluence of Western,
@@ -150,10 +154,12 @@
           authorities based in Bern.[1][2][note 1] Switzerland is a landlocked country bordered by Italy to the south,
           France to the west, Germany to the north, and Austria and Liechtenstein to the east.</p></td>
           <td style="width: 100px;"><strong style="font-size: 20px;">$400</strong></td>
-           <td><button type="button" class="btn btn-primary" style="height: 50px; width: 200px;">View Details</button></td>
+           <td><button type="button" class="btn btn-primary" style="height: 50px; width: auto;">View Details</button></td>
       </tr>
       <tr>
+        <div class="container">
         <td><img src="../assets/img/toronto.jpg" alt="Canada" class="img-rounded" style="height: 200px; width: 400px;"></td>
+        </div>
         <td style="width: 100px;"><strong style="font-size: 20px;">Toronto (Canada)</strong></td>
         <td style="width: 100px;"><img src="../assets/img/starpic.PNG" alt="starpic"></td>
         <td><p>Canada is a country in the northern part of North America. Its ten provinces and three territories
@@ -161,7 +167,7 @@
           kilometres (3.85 million square miles), making it the world's second-largest country by total area.
         </p></td>
           <td style="width: 100px;"><strong style="font-size: 20px;">$500</strong></td>
-          <td><button type="button" class="btn btn-primary" style="height: 50px; width: 200px;">View Details</button></td>
+          <td><button type="button" class="btn btn-primary" style="height: 50px; width: auto;">View Details</button></td>
       </tr>
     </table>
 </div>
@@ -213,8 +219,38 @@
   <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 30px;">Subscribe to our newsletter</h1>
   <p style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
     Please enter a valid email address to subscribe to our newsletter</p>
-    <input type="email" placeholder="Enter email address" style="width: 400px; height: 40px;" />
-    <button type="button" class="btn btn-success" style="height: 45px; width: 200px;">Subscribe</button>
+  <form #subform="ngForm" (ngSubmit)="subclick(subform)">
+  <table style="font-family: Arial, Helvetica, sans-serif;margin-left:auto;margin-right:auto;">
+  <tr>
+    <td>
+      <div class="form-group" [class.has-error]="subemail.invalid && subemail.touched">
+      <input type="email" required email id="subemail" name="subemail"
+      placeholder="Enter email address" #subemail="ngModel"
+      style="width: 400px; height: 50px; bottom: 80px;" class="form-control" ngModel
+      #email="ngModel"/>
+      <td>
+        <span class="help-block" *ngIf="subemail.errors && subemail.errors.invalid && subemail.touched">
+          Email is required
+        </span>
+        <span class="help-block" *ngIf="subemail.errors && subemail.errors.email && subemail.touched">
+          Email is invalid
+        </span>
+      </td>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding-left: 5px;">
+      <div>
+      <button type="submit"
+       (click)="subclick()" [disabled]="!!subemail.errors?.email && subemail.touched"
+       [disabled]="subform.invalid" class="btn btn-success"
+       style="height: 55px; width: auto;">Subscribe</button>
+      </div>
+    </td>
+  </tr>
+  </table>
+</form>
 </div>
 <br>
 <br>

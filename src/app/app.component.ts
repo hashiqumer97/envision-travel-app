@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { freeApiService } from './services/freeapi.service';
 import { Comments } from './models/models';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { Comments } from './models/models';
 })
 export class AppComponent {
   title = 'travel-app';
+  subemail: any;
 
   constructor(private _freeApiService: freeApiService) {
 
@@ -22,7 +24,13 @@ export class AppComponent {
           this.lstmodels = data;
         }
       );
+
   }
+
+  subclick() {
+    alert('An email has been sent successfully to confirm your subscription.');
+  }
+
 }
 
 

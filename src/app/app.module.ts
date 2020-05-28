@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { freeApiService } from './services/freeapi.service';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { freeApiService } from './services/freeapi.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
     ],
   providers: [freeApiService],
   bootstrap: [AppComponent]
